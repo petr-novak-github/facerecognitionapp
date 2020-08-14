@@ -44,6 +44,12 @@ class App extends React.Component {
   }
   }
 
+  componentDidMount () {
+    fetch('http://localhost:3001')
+    .then(response => response.json())
+    .then(console.log)
+  }
+
 displayFaceBox = (box) => {
 
   this.setState({box: box});
