@@ -29,27 +29,30 @@ const particleOptions = {
     
       }
     }
+const initialState = {
   
+    input:'',
+    imageUrl:'',
+    box: {},
+    route: 'signin',
+    isSignedIn: false,
+    user: {
+      id: '',
+      name: '',
+      email: '',
+      entries: 0,
+      joined: ''
+
+    } 
+}
+
+ 
 
 class App extends React.Component {
 
   constructor () {
     super();
-    this.state = {
-      input:'',
-      imageUrl:'',
-      box: {},
-      route: 'signin',
-      isSignedIn: false,
-      user: {
-        id: '',
-        name: '',
-        email: '',
-        entries: 0,
-        joined: ''
-
-      } 
-  }
+    this.state = initialState
   }
 
   loadUser = (data) => {
@@ -130,7 +133,7 @@ bottom: height - (clarifaiFace.bottom_row * height)
       .then(count => {
         this.setState(Object.assign(this.state.user, {entries: count}))
       })
-
+      .catch (console.log)
 
 
     }
@@ -144,7 +147,7 @@ bottom: height - (clarifaiFace.bottom_row * height)
   onRouteChange = (route) => {
 
     if (route === 'signout') {
-      this.setState ({isSignedIn: false})
+      this.setState (initialState)
     }
     else if (route === 'home') {
       this.setState({isSignedIn: true})
