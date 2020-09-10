@@ -109,7 +109,7 @@ bottom: height - (clarifaiFace.bottom_row * height)
     
     this.setState({ imageUrl: this.state.input});
 
-    fetch ('http://localhost:3001/imageurl', {
+    fetch ('https://cryptic-shore-46985.herokuapp.com/imageurl', {
           
           method: 'post',
           headers: {'Content-Type': 'application/json'},
@@ -122,7 +122,7 @@ bottom: height - (clarifaiFace.bottom_row * height)
     
      .then(response => {
       if (response) {
-        fetch ('http://localhost:3001/image', {
+        fetch ('https://cryptic-shore-46985.herokuapp.com:3001/image', {
           
           method: 'put',
           headers: {'Content-Type': 'application/json'},
