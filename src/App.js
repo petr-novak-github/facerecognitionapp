@@ -122,7 +122,7 @@ bottom: height - (clarifaiFace.bottom_row * height)
     
      .then(response => {
       if (response) {
-        fetch ('https://cryptic-shore-46985.herokuapp.com:3001/image', {
+        fetch ('https://cryptic-shore-46985.herokuapp.com/image', {
           
           method: 'put',
           headers: {'Content-Type': 'application/json'},
