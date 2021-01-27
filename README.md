@@ -1,3 +1,10 @@
+Web App created accordnig Udemy tutorial. Put the link with foto in, and app will find the face in it.
+It has front-end part and back-end part(BE you can find in another repository).
+Used technologies: React.js, Node.js, using externa API Clarifai, Express.js, Tachyons, PostgreSQL, 
+Encrypting passwords and more ..
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
